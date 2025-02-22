@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from "react";
 // This is a typical way to define types but can be difficult and confusing to write if
-// there arre lot of props. But it is better if we define custom types for CourseGoal
+// there are lot of props. But it is better if we define custom types for CourseGoal
 
 /*export default function CourseGoal({
   title,
@@ -15,7 +15,7 @@ import { FC, PropsWithChildren } from "react";
 //   description: string;
 // };
 
-// Both type and interface can be used. If your code is outsourced, then interface is preffered since it is extendable.
+// Both type and interface can be used. If your code needs to be outsourced, then interface is preferred since it is extendable.
 
 // interface CourseGoalProps {
 //   title: string;
