@@ -24,7 +24,11 @@ import { FC, PropsWithChildren } from "react";
 //   children: React.ReactNode;
 // }
 
-type CourseGoalProps = PropsWithChildren<{ title: string }>;
+type CourseGoalProps = PropsWithChildren<{
+  title: string;
+  id: number;
+  onDelete: (id: number) => void;
+}>;
 
 // export default function CourseGoal({ title, children }: CourseGoalProps) {
 //   return (
@@ -53,14 +57,14 @@ type CourseGoalProps = PropsWithChildren<{ title: string }>;
 // };
 
 //Another way to use the types while using arrow functions is using FC which stands for functional components
-const CourseGoal: FC<CourseGoalProps> = ({ title, children }) => {
+const CourseGoal: FC<CourseGoalProps> = ({ title, id, onDelete, children }) => {
   return (
     <article>
       <div>
         <h2>{title}</h2>
         {children}
       </div>
-      <button>Button</button>
+      <button onClick={() => onDelete(id)}>Delete</button>
     </article>
   );
 };
